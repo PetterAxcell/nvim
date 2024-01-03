@@ -14,21 +14,21 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 	use 'nvim-tree/nvim-tree.lua'
+	use "nvim-lua/plenary.nvim"
 	use 'nvim-tree/nvim-web-devicons' 
 	use 'nvim-treesitter/nvim-treesitter'
 	use 'navarasu/onedark.nvim'
+	use 'lewis6991/gitsigns.nvim'
+	use {
+		"nvim-lualine/lualine.nvim",
+			requires = { "nvim-web-devicons", opt=true}
+	}
 	use {
 		'nvim-telescope/telescope.nvim',
 		tag = '0.1.5',
-		requires = {{ 'nvim-lua/plenary.nvim' }}
+		requires = { 'nvim-lua/plenary.nvim' },
 	}
-	-- use 'neovim/nvim-lspconfig'
-	-- use 'hrsh7th/cmp-nvim-lsp'
-	-- use 'hrsh7th/cmp-buffer'
-	-- use 'hrsh7th/cmp-path'
-	-- use 'hrsh7th/cmp-cmdline'
-	-- use 'hrsh7th/nvim-cmp'
-  -- Automatically set up your configuration after cloning packer.nvim
+
   -- Put this at the end after all plugins
   if packer_bootstrap then
     require('packer').sync()
