@@ -19,6 +19,10 @@ return require('packer').startup(function(use)
 	use 'nvim-treesitter/nvim-treesitter'
 	use 'navarasu/onedark.nvim'
 	use 'lewis6991/gitsigns.nvim'
+	use 'tpope/vim-fugitive'
+	use 'Exafunction/codeium.vim'
+	use 'javiorfo/nvim-soil'
+	use 'javiorfo/nvim-nyctophilia'
 	use {
 		"nvim-lualine/lualine.nvim",
 			requires = { "nvim-web-devicons", opt=true}

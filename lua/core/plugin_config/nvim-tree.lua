@@ -10,4 +10,4 @@ require("nvim-tree").setup({
     dotfiles = true,
   },
 })
-vim.keymap.set('n', '<C-e>', ':NvimTreeFindFileToggle<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-S-e>', ':NvimTreeFindFileToggle<CR>', { noremap = true, silent = true })
